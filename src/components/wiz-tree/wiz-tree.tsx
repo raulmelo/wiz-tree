@@ -129,7 +129,7 @@ export class WizTree {
   // Percorrer por elementos filhos
   wizTreeChild(treeItem: itemTreeModel, id: string) {
     return (
-      <li data-index={id}>
+      <li role="listitem" data-index={id}>
 
         <span
           title={treeItem.open ? 'clique para fechar' : 'Clique para abrir'}
@@ -150,6 +150,7 @@ export class WizTree {
         </label>
         {!treeItem.disabledChild ?
           <ul
+            role="list"
             aria-hidden={`${treeItem.open ? 'false' : 'true'}`}
             class={treeItem.open ? 'open' : ''}
           >

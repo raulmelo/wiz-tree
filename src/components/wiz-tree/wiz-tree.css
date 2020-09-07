@@ -1,8 +1,5 @@
 :host {
   display: block;
-}
-
-.wizTree {
   --colorSelected: #00AA9B;
   --colorText: #AFAEAE;
   --sizeArrow: 15px;
@@ -11,15 +8,6 @@
   --fontFamily: 'Roboto', sans-serif;
   --textLoading: 'Aguarde';
   --textSize: 16px;
-}
-.wizTree--arrow {
-  width: 15px;
-  height: 15px;
-  display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url('data:image/svg+xml,%3Csvg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M7.11149 2.71444L11.6488 7.25171L7.11149 11.789" stroke="var(--colorArrow)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A');
 }
 
 .wizTree__check {
