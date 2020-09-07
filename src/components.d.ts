@@ -5,31 +5,15 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { EventDataChild, itemTreeModel } from "./components/wiz-tree/wiz-tree-models";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface WizTree {
+        "fetchdata": boolean;
+        "list": itemTreeModel[];
+        "setchild": EventDataChild;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLWizTreeElement extends Components.WizTree, HTMLStencilElement {
     }
     var HTMLWizTreeElement: {
@@ -37,29 +21,18 @@ declare global {
         new (): HTMLWizTreeElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
         "wiz-tree": HTMLWizTreeElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface WizTree {
+        "fetchdata"?: boolean;
+        "list"?: itemTreeModel[];
+        "onHandleSelected"?: (event: CustomEvent<{data: any, label: string | number}[]>) => void;
+        "onRequestData"?: (event: CustomEvent<EventDataChild>) => void;
+        "setchild"?: EventDataChild;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
         "wiz-tree": WizTree;
     }
 }
@@ -67,7 +40,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "wiz-tree": LocalJSX.WizTree & JSXBase.HTMLAttributes<HTMLWizTreeElement>;
         }
     }

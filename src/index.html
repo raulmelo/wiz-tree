@@ -9,6 +9,43 @@
     <script nomodule src="/build/wiz-tree-2.js"></script>
   </head>
   <body>
-    <wiz-tree></wiz-tree>
+    <wiz-tree fetchdata="true" id="view"></wiz-tree>
   </body>
+  <script>
+  var listNew = [
+    {
+    label: 'Julieta Pena Rocha', selected: false, disabledChild: false, open: false, child: [
+          { label: 'Dr. Felipe Miguel Salgado', selected: false, disabledChild: false, open: false, child: [
+          { label: 'Regina Franco', selected: false, open: false, child: [] },
+          { label: 'Luciano Anderson', selected: false, disabledChild: false, open: false, child: [
+              { label: 'Paula Domingues', selected: false, disabledChild: true, open: false, child: [] },
+              { label: 'Joaquin Corona', selected: false, disabledChild: false, open: false, child: [] },
+            ]
+          },
+          { label: 'Renata Marin', selected: false, disabledChild: false, open: false, child: [] }
+        ]
+      },
+     { label: 'Alma Micaela', selected: false, disabledChild: false, open: false, child: [] },
+    ]
+      },
+      { label: 'Giogirna sona', selected: false, disabledChild: false, open: false, child: [] },
+      { label: 'Sena  sona', selected: false, disabledChild: false, open: false, child: [] },
+    ]
+
+    var wizTree = document.getElementById('view');
+
+    wizTree.list = listNew
+    wizTree.addEventListener('requestData', event => {
+      // Executar requisição api
+
+      var dataAPi = [
+        { label: 'Taric - SUP', selected: false, disabledChild: false, open: false, child: [] },
+        { label: 'Udyr - JG', selected: false, disabledChild: false, open: false, child: [] },
+        { label: 'Lilia - MID', selected: false, disabledChild: true, open: false, child: [] },
+      ]
+      setTimeout(() => {
+        event.detail.child = dataAPi
+        wizTree.setchild = event.detail
+      }, 2000);
+    })</script>
 </html>
