@@ -29,7 +29,7 @@ npm i @wizsolucoes/wiz-tree
 ```
 
 ###  Exemplo parametros listagem
-Para mostrar a arvore de arquivos deve seguir o seguinte exemplo.
+Para mostrar a árvore de arquivos deve seguir o seguinte exemplo.
 ```JSX
 const list = [{
 	label: 'Julieta Pena Rocha',
@@ -45,10 +45,10 @@ const list = [{
 ####  Parâmetros  da listagem
 | Parâmetro | tipagem | Obrigatório | Descrição | 
 | -- | -- | -- | -- |  
-| Label | string | Sim | Esse parâmetro é o que mostra no front para selecionar item da árvore.
-| selected | boolean | Sim | Esse parâmetro corresponde se o item já vem selecionado.
+| Label | string | Sim | Esse parâmetro é o que mostra no front para selecionar.
+| selected | boolean | Não | Esse parâmetro corresponde se o item já vem selecionado.
 | disabledChild | boolean | Não | Esse parâmetro sinaliza se existe valores abaixo dele.
-| open | boolean | Sim |  Esse parâmetro define se há árvore abaixo já deve vim aberta.
+| open | boolean | Não |  Esse parâmetro define se há árvore abaixo já deve vim aberta.
 | child | Array | Não | Deve passar os elementos filhos com os mesmo parâmetro acima.
 
 
@@ -119,7 +119,7 @@ wizTree.addEventListener('requestData', event  => {
 	
 	  itemSelected.child = data // Adiciona os novos valores no parametro child.
 		//ABAIXO RETORNA PARA O COMPONENTE OS NOVOS VALORES 
-		wizTree.setchild = itemSelected.child
+		wizTree.setchild = itemSelected
 	})
 });
 ```

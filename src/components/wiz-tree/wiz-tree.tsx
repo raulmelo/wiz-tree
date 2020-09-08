@@ -172,7 +172,7 @@ export class WizTree {
         <div class="wizTree">
           {this.list.length ?
             <div class="wizTree__content">
-              {this.list.map((item: itemTreeModel, id: number) => <ul>{this.wizTreeChild(item, id.toString())}</ul>)}
+              {this.list.map((item: itemTreeModel, id: number) => <ul role="list" >{this.wizTreeChild(item, id.toString())}</ul>)}
             </div>
           : ''}
         </div>

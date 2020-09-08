@@ -1,5 +1,5 @@
 {
-  "name": "wiz-tree-2",
+  "name": "@wizsolucoes/wiz-tree",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -9,7 +9,7 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/wiz-tree-2/wiz-tree-2.js",
+  "unpkg": "dist/wiz-tree/wiz-tree.js",
   "files": [
     "dist/",
     "loader/"
