@@ -6,10 +6,10 @@
 
 
 # :sparkles: Wiz Tree
-
+ Um simples e flexível componente  de visualização de pastas ou hierarquia, trazendo funcionalidade dinâmicas.
 
 ## Como usar 
- Um simples e flexível componente  de visualização de pastas ou hierarquia, trazendo funcionalidade dinâmicas.
+
 
 ```
 npm i @wizsolucoes/wiz-tree
