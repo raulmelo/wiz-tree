@@ -2,7 +2,7 @@
   "hosting": {
     "headers": [
       {
-        "source": "/build/p-*",
+        "source": "https://raw.githubusercontent.com/raulmelo/wiz-tree/gh-pages/build/p-*",
         "headers": [
           {
             "key": "Cache-Control",
@@ -13,3 +13,4 @@
     ]
   }
 }
+
