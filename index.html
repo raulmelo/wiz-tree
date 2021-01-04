@@ -1,0 +1,43 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> <title>Wiz-tree</title> <link rel="modulepreload" href="/build/p-3daeb75c.js"><script type="module" src="/build/p-3daeb75c.js" data-stencil data-resources-url="/build/" data-stencil-namespace="wiz-tree"></script> <script nomodule="" src="/build/wiz-tree.js" data-stencil></script> </head> <body> <section class="section"> <div class="container"> <div class="field"> <h1 class="title">Exemplo wiz-tree</h1> <p> Um simples e flexível componente  de visualização de pastas ou hierarquia, trazendo funcionalidade dinâmicas. <br> Confira documentação no github do componente</p> </div> <section> <h3>Exemplo</h3> <wiz-tree fetchdata="true" id="view"></wiz-tree> <hr> <ul class="list" id="demo"></ul> </section> </div> </section> <script>var listNew = [
+          { label: 'Julieta Pena Rocha', selected: false, disabledChild: false, open: false, child: [
+          { label: 'Dr. Felipe Miguel Salgado', selected: false, disabledChild: false, open: false, child: [
+          { label: 'Regina Franco', selected: false, open: false, child: [] },
+          { label: 'Luciano Anderson', selected: false, disabledChild: false, open: false, child: [
+              { label: 'Paula Domingues', selected: false, disabledChild: true, open: false, child: [] },
+              { label: 'Joaquin Corona', selected: false, disabledChild: false, open: false, child: [] },
+            ]
+          },
+          { label: 'Renata Marin', selected: false, disabledChild: false, open: false, child: [] }
+        ]
+      },
+      { label: 'Alma Micaela', selected: false, disabledChild: false, open: false, child: [] },
+    ]
+      },
+      { label: 'Giogirna sona', selected: false, disabledChild: false, open: false, child: [] },
+      { label: 'Sena  sona', selected: false, disabledChild: false, open: false, child: [] },
+    ]
+
+    var wizTree = document.getElementById('view');
+
+    wizTree.list = listNew
+    wizTree.addEventListener('handleSelected', event  => {
+      var list = ''
+      event.detail.map(element => {
+        list = list + `<li>${element.label}</li>`
+      });
+      console.log('items selecionados --> ', list)
+      document.getElementById("demo").innerHTML = list;
+    });
+    wizTree.addEventListener('requestData', event => {
+      // Executar requisição api
+
+      var dataAPi = [
+        { label: 'Taric - SUP', selected: false, disabledChild: false, open: false, child: [] },
+        { label: 'Udyr - JG', selected: false, disabledChild: false, open: false, child: [] },
+        { label: 'Lilia - MID', selected: false, disabledChild: true, open: false, child: [] },
+      ]
+      setTimeout(() => {
+        event.detail.child = dataAPi
+        wizTree.setchild = event.detail
+      }, 2000);
+    })</script> </body></html>

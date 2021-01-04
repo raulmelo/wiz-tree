@@ -1,0 +1,1 @@
+import{p as t,b as e}from"./p-4bc7a76a.js";(()=>{const e=import.meta.url,a={};return""!==e&&(a.resourcesUrl=new URL(".",e).href),t(a)})().then(t=>e([["p-c218b37e",[[1,"wiz-tree",{fetchdata:[4],list:[16],setchild:[16]}]]]],t));
