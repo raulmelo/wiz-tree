@@ -135,7 +135,6 @@ export class WizTree {
           title={treeItem.open ? 'clique para fechar' : 'Clique para abrir'}
           aria-label="Seta para navegar abaixo"
           onClick={ () => this.openChild(treeItem, id)}
-          // TODO: FAZER TESTE SEM DISABLEDCHILD
           class={`wizTree__arrow ${treeItem.open ? 'wizTree__arrow--active' : ''} ${treeItem?.disabledChild ? 'wizTree__arrow--disabledChild' : ''}`}
         ><span></span></span>
         <label

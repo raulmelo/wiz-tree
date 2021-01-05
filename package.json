@@ -1,7 +1,7 @@
 {
-  "name": "@wizsolucoes/wiz-tree",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "@outlinestudio/wiz-tree",
+  "version": "1.0.0",
+  "description": "componente  de visualização de pastas ou hierarquia",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -10,6 +10,17 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/wiz-tree/wiz-tree.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raulmelo/wiz-tree"
+  },
+  "author": {
+    "name": "Raul Melo ",
+    "email": "raulmelo.web@gmail.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist/",
     "loader/"
@@ -24,5 +35,12 @@
   "dependencies": {
     "@stencil/core": "^2.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "stencil",
+    "Stenciljs",
+    "web components",
+    "tree-component",
+    "tree-folders"
+  ]
 }

@@ -12,7 +12,7 @@
 
 
 ```
-npm i @wizsolucoes/wiz-tree
+npm i @outlinestudio/wiz-tree
 ```
 
 |Frameworks| Link|
@@ -138,4 +138,4 @@ Você pode customizar o web componente usando *variáveis CSS*,
 |  `--colorText` | `#AFAEAE` | Cor da label descrição do item. |
 | `--colorArrow` |  `#00AA9B` | Cor da seta indicando hierarquia. |
 | `--fontFamily` |  ` 'Roboto', sans-serif;` | Fonte web para visualizar label. | 
-| `--textLoading` |  `Aguarde` | Texto do seletor ***::before*** no estado de *loading*. 
+| `--textLoading` |  `Aguarde` | Texto do seletor ***::before*** no estado de *loading*. | 

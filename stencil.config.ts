@@ -5,7 +5,7 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../../../wizon/gestor/node_modules/@wizsolucoes/wiz-tree',
+      esmLoaderPath: '../loader'
     },
     {
       type: 'dist-custom-elements-bundle',
